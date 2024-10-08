@@ -22,8 +22,6 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        Filament::serving(function () {
-            // Permitir acceso a cualquier usuario autenticado
-            Filament::auth()->check(); });
+        Filament::auth()->user()->email === 'admin@admin.com';
     }
 }
